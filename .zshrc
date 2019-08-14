@@ -1,6 +1,7 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
- 
+# npm
+export PATH="/usr/local/share/npm/bin:$PATH"
  
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -176,6 +177,7 @@ alias gm='git merge'
 alias gmotf='git merge origin/trunk --ff-only'
 alias gmot='git merge origin/trunk'
 alias gmomf='git merge origin/master --ff-only'
+alias gmom='git merge origin/master'
 alias gmou='git merge origin/utf8'
 alias gmouf='git merge origin/utf8 --ff-only'
 alias gd='git diff'
@@ -214,3 +216,9 @@ case ${OSTYPE} in
 esac
  
 # vim:set ft=zsh:
+
+eval "$(rbenv init -)"
+
+ssh-add -K ~/.ssh/gw_rsa
+
+
